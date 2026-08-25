@@ -41,7 +41,7 @@ function App() {
 
     try {
       const candidateResponse = await fetch(
-          "http://127.0.0.1:8000/candidates",
+          "https://talentbridge-wtz9.onrender.com/candidates",
           {
             method: "POST",
             headers: {
@@ -62,7 +62,7 @@ function App() {
       const candidate = await candidateResponse.json();
 
       const matchResponse = await fetch(
-          `http://127.0.0.1:8000/match/${candidate.id}`
+          `https://talentbridge-wtz9.onrender.com/match/${candidate.id}`
       );
 
       if (!matchResponse.ok) {
@@ -92,7 +92,7 @@ function App() {
 
     try {
       const response = await fetch(
-          "http://127.0.0.1:8000/jobs",
+          "https://talentbridge-wtz9.onrender.com/jobs",
           {
             method: "POST",
             headers: {
